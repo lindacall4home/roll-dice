@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Roll Dice!</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="flex-container">
+        <div id="vail">VAIL</div>
+        <div id="resorts">RESORTS</div>
+      </div>
+      <div class="flex-container">
+        <canvas id="glcanvas"></canvas>
+      </div>
+      <div class="flex-container">
+        <div id="die1" class="die">1</div>
+        <div id="die2" class="die">2</div>
+      </div>
+      <div class="flex-container">
+        <button id="roll-button">Roll!</button>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript"          src="./bower_components/jquery-snowfall/dist/snowfall.jquery.min.js">
+    </script>
+    <script type="text/javascript" src="./main.js">
+    </script>
+  </body>
+  <script src="./node_modules/gl-matrix/dist/gl-matrix.js"></script>
+  <script type="text/javascript" src="./webgl.js"></script>
+</html>
