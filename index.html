@@ -11,17 +11,60 @@
         <div id="vail">VAIL</div>
         <div id="resorts">RESORTS</div>
       </div>
-      <div class="flex-container">
-        <canvas id="glcanvas"></canvas>
-      </div>
-      <div class="flex-container">
-        <div id="die1" class="die">1</div>
-        <div id="die2" class="die">2</div>
-      </div>
-      <div class="flex-container">
-        <button id="roll-button">Roll!</button>
-      </div>
-    </div>
+      <!-- <div id="background"></div>
+      <div id="wrapper">
+        <input id="secondroll" name="roll" type="checkbox">
+        <input id="roll" name="roll" type="checkbox">
+        <label for="roll">Roll it!</label>
+        <label for="secondroll"><span>Stop!</span></label>
+        <div id="platform"> -->
+          <div id="die1">
+            <div class="side front">
+              <div class="dot center"></div>
+            </div>
+            <div class="side front inner"></div>
+            <div class="side top">
+              <div class="dot dtop dleft"></div>
+              <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side top inner"></div>
+            <div class="side right">
+              <div class="dot dtop dleft"></div>
+              <div class="dot center"></div>
+              <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side right inner"></div>
+            <div class="side left">
+              <div class="dot dtop dleft"></div>
+              <div class="dot dtop dright"></div>
+              <div class="dot dbottom dleft"></div>
+              <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side left inner"></div>
+            <div class="side bottom">
+              <div class="dot center"></div>
+              <div class="dot dtop dleft"></div>
+              <div class="dot dtop dright"></div>
+              <div class="dot dbottom dleft"></div>
+              <div class="dot dbottom dright"></div>
+            </div>
+            <div class="side bottom inner"></div>
+            <div class="side back">
+              <div class="dot dtop dleft"></div>
+              <div class="dot dtop dright"></div>
+              <div class="dot dbottom dleft"></div>
+              <div class="dot dbottom dright"></div>
+              <div class="dot center dleft"></div>
+              <div class="dot center dright"></div>
+            </div>
+            <div class="side back inner"></div>
+            <div class="side cover x"></div>
+            <div class="side cover y"></div>
+            <div class="side cover z"></div>
+          </div>
+        </div>
+      <!-- </div>
+    </div> -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
@@ -32,6 +75,4 @@
     <script type="text/javascript" src="./main.js">
     </script>
   </body>
-  <script src="./node_modules/gl-matrix/dist/gl-matrix.js"></script>
-  <script type="text/javascript" src="./webgl.js"></script>
 </html>
