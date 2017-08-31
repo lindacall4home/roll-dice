@@ -38,15 +38,15 @@ html, body {
 
 
 @keyframes spin {
-    0% { transform: translateZ(-100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-    16% { transform: translateZ(-100px) rotateX(180deg) rotateY(180deg) rotateZ(0deg); }
-    33% { transform: translateZ(-100px) rotateX(360deg) rotateY(90deg) rotateZ(180deg); }
-    50% { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
-    66% { transform: translateZ(-100px) rotateX(180deg) rotateY(360deg) rotateZ(270deg); }
-    83% { transform: translateZ(-100px) rotateX(270deg) rotateY(180deg) rotateZ(180deg); }
-    100% { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+    0% { transform: translateZ(-50px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16% { transform: translateZ(-50px) rotateX(180deg) rotateY(180deg) rotateZ(0deg); }
+    33% { transform: translateZ(-50px) rotateX(360deg) rotateY(90deg) rotateZ(180deg); }
+    50% { transform: translateZ(-50px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+    66% { transform: translateZ(-50px) rotateX(180deg) rotateY(360deg) rotateZ(270deg); }
+    83% { transform: translateZ(-50px) rotateX(270deg) rotateY(180deg) rotateZ(180deg); }
+    100% { transform: translateZ(-50px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
 }
-@keyframes spin-duplicate {
+/*@keyframes spin-duplicate {
     0% { transform: translateZ(-100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
     16% { transform: translateZ(-100px) rotateX(180deg) rotateY(180deg) rotateZ(0deg); }
     33% { transform: translateZ(-100px) rotateX(360deg) rotateY(90deg) rotateZ(180deg); }
@@ -78,7 +78,7 @@ html, body {
 #secondroll:checked ~ #roll:checked ~ #platform > #dice,
 #secondroll:checked ~ #roll:checked ~ #platform {
     animation-play-state: paused;
-}
+}*/
 /*#wrapper {
     position: relative;
     width: 200px;
@@ -96,98 +96,121 @@ html, body {
     font-size: 2.5em;
     padding: 10px;
 }*/
-#die1 {
-    position: absolute;
-    width: 200px;
-    height: 200px;
+#dice-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+#die1,
+#die2 {
+    margin-top: 100px;
+    position: relative;
+    width: 100px;
+    height: 100px;
     transform-style: preserve-3d;
     animation: spin 50s infinite linear;
 }
 .side {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     background: #fff;
-    box-shadow:inset 0 0 40px #ccc;
-    border-radius: 40px;
+    box-shadow:inset 0 0 20px #ccc;
+    border-radius: 20px;
 }
-#die1 .cover, #die1 .inner {
+#die1 .cover, #die1 .inner,
+#die2 .cover, #die2 .inner {
     background: #e0e0e0;
     box-shadow: none;
 }
-#die1 .cover {
+#die1 .cover,
+#die2 .cover {
     border-radius: 0;
 }
-#die1 .cover.x {
+#die1 .cover.x,
+#die2 .cover.x {
     transform: rotateY(90deg);
 }
-#die1 .cover.z {
+#die1 .cover.z,
+#die2 .cover.z {
     transform: rotateX(90deg);
 }
-#die1 .front  {
-    transform: translateZ(100px);
+#die1 .front,
+#die2 .front  {
+    transform: translateZ(50px);
 }
-#die1 .front.inner  {
-    transform: translateZ(99px);
+#die1 .front.inner,
+#die2 .front.inner  {
+    transform: translateZ(49.5px);
 }
-#die1 .back {
-    transform: rotateX(-180deg) translateZ(100px);
+#die1 .back,
+#die2 .back {
+    transform: rotateX(-180deg) translateZ(50px);
 }
-#die1 .back.inner {
-    transform: rotateX(-180deg) translateZ(99px);
+#die1 .back.inner,
+#die2 .back.inner {
+    transform: rotateX(-180deg) translateZ(49.5px);
 }
-#die1 .right {
-    transform: rotateY(90deg) translateZ(100px);
+#die1 .right,
+#die2 .right {
+    transform: rotateY(90deg) translateZ(50px);
 }
-#die1 .right.inner {
-    transform: rotateY(90deg) translateZ(99px);
+#die1 .right.inner,
+#die2 .right.inner {
+    transform: rotateY(90deg) translateZ(49.5px);
 }
-#die1 .left {
-    transform: rotateY(-90deg) translateZ(100px);
+#die1 .left,
+#die2 .left {
+    transform: rotateY(-90deg) translateZ(50px);
 }
-#die1 .left.inner {
-    transform: rotateY(-90deg) translateZ(99px);
+#die1 .left.inner,
+#die2 .left.inner {
+    transform: rotateY(-90deg) translateZ(49.5px);
 }
-#die1 .top {
-    transform: rotateX(90deg) translateZ(100px);
+#die1 .top,
+#die2 .top {
+    transform: rotateX(90deg) translateZ(50px);
 }
-#die1 .top.inner {
-    transform: rotateX(90deg) translateZ(99px);
+#die1 .top.inner,
+#die2 .top.inner  {
+    transform: rotateX(90deg) translateZ(49.5px);
 }
-#die1 .bottom {
-    transform: rotateX(-90deg) translateZ(100px);
+#die1 .bottom,
+#die2 .bottom {
+    transform: rotateX(-90deg) translateZ(50px);
 }
-#die1 .bottom.inner {
-    transform: rotateX(-90deg) translateZ(99px);
+#die1 .bottom.inner,
+#die2 .bottom.inner {
+    transform: rotateX(-90deg) translateZ(49.5px);
 }
 .dot {
     position:absolute;
-    width:46px;
-    height:46px;
-    border-radius:23px;
+    width:23px;
+    height:23px;
+    border-radius:11.5px;
     background:#444;
-    box-shadow:inset 5px 0 10px #000;
+    box-shadow:inset 2.5px 0 5px #000;
 }
 .dot.center {
-    margin:77px 0 0 77px;
+    margin:38.5px 0 0 38.5px;
 }
 .dot.dtop {
-    margin-top:20px;
+    margin-top:10px;
 }
 .dot.dleft {
-    margin-left:134px;
+    margin-left:67px;
 }
 .dot.dright {
-    margin-left:20px;
+    margin-left:10px;
 }
 .dot.dbottom {
-    margin-top:134px;
+    margin-top:67px;
 }
 .dot.center.dleft {
-    margin:77px 0 0 20px;
+    margin:38.5px 0 0 10px;
 }
 .dot.center.dright {
-    margin:77px 0 0 134px;
+    margin:38.5px 0 0 67px;
 }
 
 /*#background {
