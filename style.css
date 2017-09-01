@@ -136,11 +136,18 @@ html, body {
     margin:38.5px 0 0 67px;
 }
 
-.roll{
+.roll1{
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
-  animation: roll 1.6s 2 ease-out;
+  animation: roll1 1.6s 2 ease-out;
+}
+
+.roll2{
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: roll2 1.6s 2 ease-out;
 }
 
 .spin {
@@ -157,7 +164,7 @@ html, body {
     100% { transform: translateZ(-50px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
 }
 
-@keyframes roll {
+@keyframes roll1 {
     0% { transform: translate3d(-100px,-25px,-200px) }
     12% { transform: translate3d(0px,0,-50px) }
     25% { transform: translate3d(100px,-25px,-200px) }
@@ -167,4 +174,16 @@ html, body {
     75% { transform: translate3d(50px,-12.5px,-100px) }
     87% { transform: translate3d(0px,-50px,-400px) }
     100% { transform: translate3d(-100px,-25px,-200px) }
+}
+
+@keyframes roll2 {
+    0% { transform: translate3d(100px,25px,200px) }
+    12% { transform: translate3d(0px,0,50px) }
+    25% { transform: translate3d(-100px,25px,200px) }
+    37% { transform: translate3d(0px,50px,400px) }
+    50% { transform: translate3d(100px,25px,200px) }
+    62% { transform: translate3d(0px,0,50px) }
+    75% { transform: translate3d(-50px,12.5px,100px) }
+    87% { transform: translate3d(0px,50px,400px) }
+    100% { transform: translate3d(100px,25px,200px) }
 }
