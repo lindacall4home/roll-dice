@@ -1,0 +1,19 @@
+{
+  "name": "roll-dice",
+  "version": "1.0.0",
+  "description": "#### roll-dice allows the user to repeatedly click the **roll** button to run the dice animation.  Each time the dice roll, they **land** on new, randomly-generated numbers.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindacall4home/roll-dice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lindacall4home/roll-dice/issues"
+  },
+  "homepage": "https://github.com/lindacall4home/roll-dice#readme"
+}
