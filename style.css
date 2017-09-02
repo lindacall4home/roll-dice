@@ -36,10 +36,6 @@ html, body {
   color: #3a3a3c;
 }
 
-/*.btn-container{
-  position: absolute;
-}*/
-
 #roll-btn{
   font-family: Helvetica, Arial, sans-serif;
   font-size: 35px;
@@ -206,3 +202,24 @@ html, body {
 .die.show4 { transform: translateZ( -50px ) rotateY( -90deg ); }
 .die.show5 { transform: translateZ( -50px ) rotateX( 90deg ); }
 .die.show6 { transform: translateZ( -50px ) rotateY(  180deg ); }
+
+/*
+skier code pen by Mikolaj Szczepkowski from https://codepen.io/Mikolaj_Szczepkowski/pen/Woxrrb
+*/
+
+svg {
+  display: block;
+  width: 150px;
+  margin: auto;
+  overflow:visible;
+  margin-left: 100px;
+  position:absolute;
+  left: 0px;
+  top: 475px;
+}
+
+#skier {
+  transform: translate(-60px, -70px);
+}
+
+.cls-1,.cls-9{fill:none;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8{stroke:#4d4d4f;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-2{fill:#fbb851;}.cls-3{fill:#ae5ba3;}.cls-4{fill:#bc8a3d;}.cls-5{fill:#f9d6dd;}.cls-6{fill:#fff;}.cls-7{fill:#58bb89;}.cls-8{fill:#e13256;}.cls-9{stroke:#e13256;}
