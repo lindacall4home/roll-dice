@@ -36,6 +36,22 @@ html, body {
   color: #3a3a3c;
 }
 
+/*.btn-container{
+  position: absolute;
+}*/
+
+#roll-btn{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  width: 150px;
+  margin-top: 125px;
+  border-radius: 10%;
+  color: #3a3a3c;
+  background: #fff;
+  box-shadow:inset 0 0 20px #ccc;
+  border-radius: 10px;
+}
+
 .wrapper{
   display: flex;
   justify-content: space-around;
@@ -137,15 +153,11 @@ html, body {
 }
 
 .roll1{
-  width: 100px;
-  height: 100px;
   transform-style: preserve-3d;
   animation: roll1 1.6s 2 ease-out;
 }
 
 .roll2{
-  width: 100px;
-  height: 100px;
   transform-style: preserve-3d;
   animation: roll2 1.6s 2 ease-out;
 }
@@ -187,3 +199,10 @@ html, body {
     87% { transform: translate3d(0px,50px,400px) }
     100% { transform: translate3d(100px,25px,200px) }
 }
+
+.die.show1 { transform: translateZ( 0px ) rotateY( 0deg ); }
+.die.show2 { transform: translateZ( -50px ) rotateX( -90deg ); }
+.die.show3 { transform: translateZ( -50px ) rotateY( 90deg ); }
+.die.show4 { transform: translateZ( -50px ) rotateY( -90deg ); }
+.die.show5 { transform: translateZ( -50px ) rotateX( 90deg ); }
+.die.show6 { transform: translateZ( -50px ) rotateY(  180deg ); }
